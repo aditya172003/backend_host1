@@ -2,16 +2,20 @@
 // const User=require("./schema/userschema");  // we can require i=our collectionn document using this user 
 const dotenv=require("dotenv");
 dotenv.config();
-let cors = require("cors");
-app.use(cors());
+
 
 const jwt=require("jsonwebtoken")
 const express= require("express");
 const cookieparser = require('cookie-parser')
+
+let cors = require("cors");
 const app=express();
+
+
 require("./conn/connect");
 app.use(cookieparser())
 app.use(express.json())
+app.use(cors());
 
 
 
