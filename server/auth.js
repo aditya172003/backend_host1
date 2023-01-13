@@ -15,8 +15,16 @@ const Mycart=require('../schema/addToCart');
 const Authentication = require("../MiddleWare/middleware");
 // conntection with database and saaving it in database
 require("../conn/connect");
+
+
 router.get("/",(req,res)=>{
     res.send("this is from sever folder with router of express");   
+})
+
+
+
+router.get("/info",(req,res)=>{
+   res.send("trial changes in the  new router successfully fetched ");   
 })
 
 
