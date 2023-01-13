@@ -6,6 +6,9 @@ const jwt=require("jsonwebtoken")
 const cookieparser = require('cookie-parser')
 
 const app =express();
+
+let cors = require("cors");
+app.use(cors())
 app.use(cookieparser());
 //hashing password 
 const bcrypt=require("bcrypt")
@@ -136,7 +139,7 @@ router.post("/log",async(req,res)=>{
 
 
 // removed middle woare , Authentication
-router.get("/ab",(req,res)=>{
+router.get("/ab",Authentication,(req,res)=>{
    console.log("request reached ")
       res.send(req.rootuser)
 })
