@@ -4,6 +4,7 @@ const router=express.Router();
 const jwt=require("jsonwebtoken")
 
 const cookieparser = require('cookie-parser')
+
 const app =express();
 app.use(cookieparser());
 //hashing password 
@@ -27,7 +28,7 @@ router.get("/info",(req,res)=>{
    res.send("trial changes in the  new router successfully fetched ");   
 })
 
-   
+
 // router.post("/register", (req,res)=>{
 //     console.log(req.body.name);
 //    const {name,email,phone,work,password,cpassword}=req.body;

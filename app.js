@@ -14,8 +14,14 @@ const app=express();
 
 require("./conn/connect");
 app.use(cookieparser())
+
+
+app.use(cors(options));
+
+// Then pass these options to cors:
+
 app.use(express.json())
-app.use(cors());
+
 
 
 
