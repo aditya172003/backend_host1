@@ -10,6 +10,10 @@ const app=express();
 require("./conn/connect");
 app.use(cookieparser())
 app.use(express.json())
+let cors = require("cors");
+app.use(cors());
+
+
 // requiring the router part of beckend urls where actual requests and responsese are going to happpens  ;
 
 app.use(require("./server/auth"));

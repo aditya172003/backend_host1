@@ -27,7 +27,7 @@ router.get("/info",(req,res)=>{
    res.send("trial changes in the  new router successfully fetched ");   
 })
 
-
+   
 // router.post("/register", (req,res)=>{
 //     console.log(req.body.name);
 //    const {name,email,phone,work,password,cpassword}=req.body;
