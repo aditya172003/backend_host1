@@ -135,8 +135,8 @@ router.post("/log",async(req,res)=>{
 })
 
 
-
-router.get("/ab", Authentication,(req,res)=>{
+// removed middle woare , Authentication
+router.get("/ab",(req,res)=>{
    console.log("request reached ")
       res.send(req.rootuser)
 })

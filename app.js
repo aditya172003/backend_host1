@@ -16,7 +16,7 @@ require("./conn/connect");
 app.use(cookieparser())
 
 
-app.use(cors());
+app.use(cors())
 
 // Then pass these options to cors:
 
