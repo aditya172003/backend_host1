@@ -127,17 +127,18 @@ router.post("/log",async(req,res)=>{
            // console token during login 
            console.log("1 ] console token during login")
              console.log(token)
-
+    
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+25892000000),
-                httpOnly:true
-            });
-
-          (isMatch)? res.status(200).json({message:"user login successfully"}):res.status(401).json({message:"wrong password "})
+                httpOnly:false
+            }); 
+            
+              
+          (isMatch)? res.status(200).send({
+           
+            message:"login success" 
+          }):res.send({message:"unable to login"})
         
-   
-
-
             
          }else{
             res.status(404).json({error:"user not found please register first"})
@@ -152,9 +153,9 @@ router.post("/log",async(req,res)=>{
 
 // removed middle woare , Authentication
 router.get("/ab",Authentication,(req,res)=>{
-   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-   res.header("Access-Control-Allow-Credentials", "true");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   // res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+   // res.header("Access-Control-Allow-Credentials", "true");
+   //  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
    console.log("request reached ")
       res.send(req.rootuser)
       console.log(req.rootuser);
