@@ -10,10 +10,10 @@ app.use(cookieparser());
 
 const Authentication= async (req,res,next)=>{
 try{
-    const token=req.cookies.jwtoken;
+    const token=req.cookies.jwtoken ;
    
     
-    console.log("tiss is token ",token)
+    console.log("this is token ",token)
     const verifyToken = jwt.verify(token,process.env.JWT_PASS) ;
     console.log("verified token ",verifyToken)
     const rootuser = await user.find({_id:verifyToken._id,"tokens.token":token});
