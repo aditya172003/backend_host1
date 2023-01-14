@@ -129,7 +129,7 @@ router.post("/log",async(req,res)=>{
              console.log(token)
     
             res.cookie("jwtoken",token,{
-               domain:"https://api-backend-2c6r.onrender.com",
+              
                 expires:new Date(Date.now()+25892000000),
                 httpOnly:true
             }); 
