@@ -11,7 +11,9 @@ app.use(cookieparser());
 const Authentication= async (req,res,next)=>{
 try{
     const token=req.cookies.jwtoken;
-   
+   console.log("tkong generated is send to suthentication")
+   console.log("tokken in authentication function ");
+   console.log(token)
     
     console.log("tiss is token ",token)
     const verifyToken = jwt.verify(token,process.env.JWT_PASS) ;

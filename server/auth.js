@@ -101,7 +101,8 @@ router.post("/regi",async(req,res)=>{
 
 
 router.post("/log",async(req,res)=>{
-   try{
+   try{ 
+      console.log("user wants to login")
      
     const {email ,password}=req.body;
 
@@ -113,8 +114,10 @@ router.post("/log",async(req,res)=>{
             //checking password this is hashed password so  this is compared like this using bcrypt 
             const isMatch=await bcrypt.compare(password,us.password)
             const token=await us.generateAuthToken() 
-         
-            // console.log(token)
+
+           // console token during login 
+           console.log("1 ] console token during login")
+             console.log(token)
 
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+25892000000),
@@ -142,6 +145,7 @@ router.post("/log",async(req,res)=>{
 router.get("/ab",Authentication,(req,res)=>{
    console.log("request reached ")
       res.send(req.rootuser)
+      console.log(req.rootuser);
 })
 
 
