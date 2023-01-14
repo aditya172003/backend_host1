@@ -10,10 +10,11 @@ app.use(cookieparser());
 
 const Authentication= async (req,res,next)=>{
 try{
-//    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-//    res.header("Access-Control-Allow-Credentials", "true");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    const token=req.cookies.jwtoken;
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Credentials", "true");
+     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept ");
+    const token=req.cookies.jwtoken ||req.body.jwtoken || req.query.jwtoken || req.headers["x-access-token"];
+    
    console.log("tkong generated is send to authentication")
    console.log("tokken in authentication function ");
    console.log(token)
