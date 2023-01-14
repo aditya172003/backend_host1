@@ -8,7 +8,12 @@ const cookieparser = require('cookie-parser')
 const app =express();
 
 let cors = require("cors");
-app.use(cors())
+app.use(cors(
+   {
+      origin:"http://localhost:3000"
+   }
+))
+
 app.use(cookieparser());
 //hashing password 
 const bcrypt=require("bcrypt")

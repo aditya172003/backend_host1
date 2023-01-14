@@ -18,8 +18,11 @@ require("./conn/connect");
 app.use(cookieparser())
 
 
-app.use(cors())
-
+app.use(cors(
+    {
+       origin:"http://localhost:3000"
+    }
+ ))
 // Then pass these options to cors:
 
 app.use(express.json())
