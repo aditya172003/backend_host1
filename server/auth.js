@@ -11,8 +11,10 @@ let cors = require("cors");
 app.use(cors(
    {
       origin:"http://localhost:3000",
-      Credentials: true
-
+      Credentials: true,
+     headers:"Content-type",
+      methods:"GET ,POST ,PUT",
+      optionSuccessStatus:200
    }
 ))
 
