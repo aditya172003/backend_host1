@@ -20,11 +20,11 @@ app.use(cookieparser())
 
 app.use(cors(
     {
-        origin:"http://localhost:3000",
-        Credentials: true,
-       headers:"Content-type",
-        methods:"GET ,POST ,PUT",
-        optionSuccessStatus:200
+      origin:"http://localhost:3000",
+      credentials: true,
+      headers:"Content-type",
+      methods:{GET,POST ,PUT},
+      optionSuccessStatus:200
     }
  ))
 // Then pass these options to cors:
