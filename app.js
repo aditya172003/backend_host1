@@ -22,7 +22,7 @@ app.use(cors(
     {
       origin:"http://localhost:3000",
       credentials: true,
-      headers:"Content-type",
+      headers:"Content-type,Accept",
    
       optionSuccessStatus:200
     }
