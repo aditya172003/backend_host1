@@ -9,7 +9,9 @@ const { db } = require("../schema/addToCart");
 const Db=process.env.DATABASE;
 
 
-mongoose.connect(Db,{}).then(()=>{
+mongoose.connect(Db,{
+ 
+    }).then(()=>{
     console.log("Conection has been done successfully with mongoDB Atlas database.");
 }).catch((err)=>{
     console.log("unable to connect error is :",err);

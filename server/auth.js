@@ -13,7 +13,7 @@ app.use(cors(
       origin:"http://localhost:3000",
       credentials: true,
      headers:"Content-type",
-      methods:"GET ,POST ,PUT",
+      // methods:"GET ,POST ,PUT",
       optionSuccessStatus:200
    }
 ))
