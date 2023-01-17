@@ -10,7 +10,7 @@ const app =express();
 let cors = require("cors");
 app.use(cors(
    {
-      origin:"https://api-trial-run.vercel.app/",
+      origin:"https://api-trial-run.vercel.app",
       credentials: true,
      headers:"Content-type",
       // methods:"GET ,POST ,PUT",
